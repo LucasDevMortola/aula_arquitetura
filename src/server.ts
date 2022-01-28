@@ -7,7 +7,7 @@ import Redis from "./core/infra/data/connections/redis";
  * Este é o arquivo que abre a conexão do banco e inicia a aplicação e o servidor.
  */
 
-Promise.all([new Database().openConnection(), new Redis().openConnection()])
+Promise.all([new Database().openConnection() ]) //new Redis().openConnection()
   .then(() => {
     const app = new App();
     app.init();
